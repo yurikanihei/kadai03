@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- リセットcss読み込み -->
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- style.css読み込み -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jquery読み込み -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title>ジャンケンゲーム</title>
+</head>
+<body>
+    <!-- タイトルエリア -->
+    <div class="main">
+        <h1 class="title">ジャンケンゲーム</h1>
+    </div>
+
+    <!-- 結果表示エリア -->
+    <div class="result">
+       <h2 class="text"></h2>
+       <p class="result-img"></p>
+       <div class="result-text"></div>
+    </div>
+
+    <!-- 入力エリア -->
+    <div class="my-hand">
+        <ul class="hand-list">
+            <li id="gu" class="hand" value="1"><p><img class="hand-img" src="images/gu.png" alt=""></p></li>
+            <li id="choki" class="hand" value="2"><p><img class="hand-img" src="images/choki.png" alt=""></p></li>
+            <li id="pa" class="hand" value="3"><p><img class="hand-img" src="images/pa.png" alt=""></p></li>
+        </ul>
+    </div>
+
+<!-- ここからjs -->
+<script>
+        // id=btnボタンがクリックされたら実行
+        $("#gu").on('click',function() {
+         console.log("クリックできてるよ");
+         
+
+         //ランダム整数の生成０～３
+         let num = Math.floor( Math.random()*2 );
+         console.log(num);
+
+         //じゃんけんの条件分岐
+         if ( num == 0) {
+             //alert("チョキ");
+             $(".result-img").html('<img src="images/choki.png" alt="">');
+             $(".result-text").html('wiiin');
+
+             
+         }else if ( num == 1) {
+             //alert("パー");
+             $(".result-img").html('<img src="images/pa.png" alt="">');
+             $(".result-text").html('looose');
+             
+         }
+
+     });
+
+</script>
+<script>
+    // id=btnボタンがクリックされたら実行
+    $("#choki").on('click',function() {
+     console.log("クリックできてるよ");
+     
+
+     //ランダム整数の生成０～３
+     let num = Math.floor( Math.random()*2 );
+     console.log(num);
+
+     //じゃんけんの条件分岐
+     if ( num == 0) {
+         //alert("グー");
+         $(".result-img").html('<img src="images/gu.png" alt="">');
+         $(".result-text").html('looose');
+
+         
+     }else if ( num == 1) {
+         //alert("パー");
+         $(".result-img").html('<img src="images/pa.png" alt="">');
+         $(".result-text").html('wiiin');
+         
+     }
+
+ });
+
+</script>
+<script>
+    // id=btnボタンがクリックされたら実行
+    $("#pa").on('click',function() {
+     console.log("クリックできてるよ");
+     
+
+     //ランダム整数の生成０～３
+     let num = Math.floor( Math.random()*5 );
+     console.log(num);
+
+     //じゃんけんの条件分岐
+     if ( num < 1) {
+         //alert("グー");
+         $(".result-img").html('<img src="images/gu.png" alt="">');
+         $(".result-text").html('wiiin');
+
+         
+     }else if ( num = 1<5) {
+         //alert("チョキ");
+         $(".result-img").html('<img src="images/choki.png" alt="">');
+         $(".result-text").html('looose');
+         
+     }
+
+ });
+
+</script>
+</body>
+</html>

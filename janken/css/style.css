@@ -1,0 +1,78 @@
+@charset "utf-8";
+img {
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 80px;
+    background-color: cornflowerblue;
+}
+
+.title {
+    color: cornsilk;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.text {
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.result {
+    width: 100%;
+    height: 500px;
+    text-align: center;
+}
+
+.result-img {
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.result-text {
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.my-hand {
+    width: 100%;
+    height: 300px;
+}
+
+.hand-list {
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.hand {
+    width: 30%;
+    height: 100%;
+}
+
+.hand p {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hand-img:hover {
+    opacity:0.5;
+    cursor: pointer;
+}
+
+.hand-img:active {
+    position: relative;
+	top: 3px;
+}
